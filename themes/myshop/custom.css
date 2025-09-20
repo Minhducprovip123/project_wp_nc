@@ -179,3 +179,49 @@ body {
     font-size: 1rem;
 }
 
+.entry-content .wp-block-page-list,
+.entry-content nav.wp-block-navigation,
+.entry-content > ul,
+.entry-content > ul.page_list,
+.entry-content > ul.wp-block-page-list,
+.entry-content > ul > li.page_item,
+.entry-content ul.page_item_has_children { display:none !important; }
+
+/* ==== Stories layout ==== */
+.container{max-width:1320px;margin:0 auto;padding:0 24px}
+.stories-tabs{display:flex;gap:24px;margin:24px 0 8px}
+.stories-tab{font-weight:700;text-transform:uppercase;text-decoration:none;color:#6b7280}
+.stories-tab.is-active,.stories-tab:hover{color:#111;border-bottom:2px solid #111}
+
+.story-hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin:12px 0 40px}
+.story-hero .hero-media img{width:100%;height:auto;display:block}
+.hero-meta .meta-top{display:flex;gap:12px;color:#6b7280;font-size:13px;font-weight:600}
+.hero-title{font-size:36px;line-height:1.2;margin:10px 0 8px}
+.hero-title a{text-decoration:none;color:#111}
+.hero-excerpt{color:#374151}
+
+.stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.story-card{border:1px solid #eee;background:#fff;transition:.2s}
+.story-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-2px)}
+.story-card .card-media img{width:100%;height:auto;display:block}
+.card-body{padding:14px}
+.card-top{display:flex;gap:10px;color:#6b7280;font-size:12px;font-weight:700;text-transform:uppercase}
+.card-cat{color:#111}
+.card-title{font-size:20px;line-height:1.35;margin:6px 0}
+.card-title a{text-decoration:none;color:#111}
+.card-excerpt{color:#4b5563;font-size:14px}
+
+.stories-pagination{display:flex;justify-content:center;margin:36px 0}
+.stories-pagination .page-numbers{padding:8px 12px;margin:0 4px;border:1px solid #ddd;border-radius:6px;text-decoration:none;color:#111}
+.stories-pagination .current,.stories-pagination .page-numbers:hover{background:#111;color:#fff;border-color:#111}
+
+/* responsive */
+@media (max-width:992px){
+  .story-hero{grid-template-columns:1fr}
+  .stories-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .stories-grid{grid-template-columns:1fr}
+  .hero-title{font-size:28px}
+}
+
